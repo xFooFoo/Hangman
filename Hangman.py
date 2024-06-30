@@ -7,11 +7,12 @@
 
 from PyDictionary import PyDictionary
 from typing import List
+import os
 import time
 import random
 
 def Hangman_setup():
-    file_path = "words.txt"
+    file_path = os.path.dirname(os.path.abspath(__file__)) + "\words.txt"
     with open(file_path, "r") as file:
         content = file.read()
     words = content.split() #55900 words in txt
